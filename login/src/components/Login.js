@@ -1,4 +1,4 @@
-import { Avatar, Grid, Paper, TextField } from '@mui/material'
+import { Avatar, Button, Checkbox, FormControlLabel, Grid, Paper, TextField } from '@mui/material'
 import React from 'react'
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 
@@ -15,6 +15,10 @@ function Login() {
                      </Grid>
                      <TextField id="standard-basic" label="Username" placeholder='Enter Username' variant="standard" fullWidth  required/>
                      <TextField id="standard-basic" label="Password" placeholder='Enter Password' type='password' variant="standard" fullWidth  required/>
+                     <FormControlLabel control={<Checkbox name='checkedB' color='primary' align=''/>} label="Remember me" />
+                     <Button type='submit' color='primary' variant="contained" fullWidth>Sign in</Button>
+
+
                 </Paper>
             </Grid>
         </div>
