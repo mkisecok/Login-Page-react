@@ -1,5 +1,5 @@
 import React from 'react'
-import {Grid,Paper,Avatar,Typography} from '@mui/material'
+import {Grid,Paper,Avatar,Typography,TextField,Button} from '@mui/material'
 import AddCircleOutlineOutlinedIcon from '@mui/icons-material/AddCircleOutlineOutlined';
 import '../App.css'
 
@@ -16,6 +16,14 @@ function SignUp() {
                  <h2 style={{margin:0}}> Sign Up</h2>
                  <Typography variant='caption'>Please fill this form to create an account</Typography>
              </Grid>
+             <form>
+                 <TextField label='Name' variant="standard" placeholder='Enter your name' fullWidth  required/>
+                 <TextField label='Email' variant="standard" placeholder='Enter your Email'fullWidth  required/>
+                 <TextField label='Phone Number' variant="standard" placeholder='Enter your Phone' fullWidth  />
+                 <TextField label='Password' variant="standard" placeholder='Enter your Password'type='password' fullWidth  required/>
+                 <TextField label='Confirm Password' type='password' placeholder='Confirm your Password'variant="standard" fullWidth  required/>
+                 <Button type='submit' color='primary' variant='contained'>Sign Up</Button>
+             </form>
              
          </Paper>
 
