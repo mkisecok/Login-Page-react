@@ -6,11 +6,20 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
-import '../App.css'
+import {Formik,Field,Form} from 'formik'
 
 function SignUp() {
     const paperStyle={padding:20, height:'70vh', width:300, margin:'auto'};
-    const avatarStyle={backgroundColor:'#1bbd7d'}
+    const avatarStyle={backgroundColor:'#1bbd7d'};
+    const initialValues={
+        name:'',
+        email:'',
+        phoneNumber:'',
+        gender:'',
+        password:'',
+        confirmPassword:'',
+        termsAndConditions:false,
+    }
     return (
      <Grid>
          <Paper  style={paperStyle}>
@@ -21,13 +30,16 @@ function SignUp() {
                  <h2 style={{margin:0}}> Sign Up</h2>
                  <Typography variant='caption'>Please fill this form to create an account</Typography>
              </Grid>
-             <form>
-                 <TextField label='Name' variant="standard" placeholder='Enter your name' fullWidth  required/>
-                 <TextField label='Email' variant="standard" placeholder='Enter your Email'fullWidth  required/>
-                 <TextField label='Phone Number' variant="standard" placeholder='Enter your Phone' fullWidth  />
+            <Formik initialValues={initialValues}>
+                {(props)=>(
+                    <Form>
+ 
+                 <Field as={TextField} label='Name' name='name' variant="standard" placeholder='Enter your name' fullWidth  required/>
+                 <Field as={TextField} label='Email' name='email' variant="standard" placeholder='Enter your Email'fullWidth  required/>
+                 <TextField label='Phone Number' name='phoneNumber' variant="standard" placeholder='Enter your Phone' fullWidth  />
                  <FormControl component="fieldset" style={{marginTop:5}}>
                 <FormLabel component="legend">Gender</FormLabel>
-                <RadioGroup
+                <Field as={RadioGroup}
                     aria-label="gender"
                     defaultValue="female"
                     name="radio-buttons-group"
@@ -36,13 +48,19 @@ function SignUp() {
                     <FormControlLabel value="female" control={<Radio color="success"/>} label="Female"  />
                     <FormControlLabel value="male" control={<Radio color="success"/>} label="Male" />
                     <FormControlLabel value="other" control={<Radio color="success"/>} label="Other" />
-                </RadioGroup>
+                </Field>
                 </FormControl>
-                 <TextField label='Password' variant="standard" placeholder='Enter your Password'type='password' fullWidth  required/>
-                 <TextField label='Confirm Password' type='password' placeholder='Confirm your Password'variant="standard" fullWidth  required/>
-                 <FormControlLabel control={<Checkbox />} label="I accept the terms and conditions" />
+                 <Field as={TextField} label='Password' name='password' variant="standard" placeholder='Enter your Password'type='password' fullWidth  required/>
+                 <Field as={TextField} label='Confirm Password' name='confirmPassword' type='password' placeholder='Confirm your Password'variant="standard" fullWidth  required/>
+                 <FormControlLabel control={<Field as={Checkbox}  name='termsAndConditions'/>} label="I accept the terms and conditions" />
                  <Button type='submit' color='primary' variant='contained'>Sign Up</Button>
-             </form>
+             
+
+                    </Form>
+                )}
+            </Formik>
+
+            
              
          </Paper>
 
