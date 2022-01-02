@@ -1,7 +1,8 @@
 import React from 'react'
 import '../App.css'
-import {Button, TextField} from '@material-ui/core'
-function SignIn() {
+import {Button, Divider, TextField} from '@material-ui/core'
+import { Link } from 'react-router-dom'
+function SignUp() {
     return (
         <div>
          
@@ -25,9 +26,16 @@ function SignIn() {
           <TextField id='password' type='text' variant='outlined' label='Enter Password' fullWidth />
           <Button variant='contained' color='primary'>Create Account</Button>
           </div>
+          <Divider variant='middle'/>
+          <p className='text-center'>
+              <Link to='\login'>
+                  Already have an Account?
+              
+              </Link>
+          </p>
 
         </div>
     )
 }
 
-export default SignIn
+export default SignUp
