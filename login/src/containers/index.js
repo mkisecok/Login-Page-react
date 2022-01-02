@@ -37,7 +37,7 @@ function SignInOutContainer() {
       }
     return (
 <Paper elevation={20} style={paperStyle}>
-<Tabs value={value} onChange={handleChange} aria-label="disabled tabs example">
+<Tabs value={value} onChange={handleChange} aria-label=" tabs example" centered>
   <Tab label="Sign In" />
   
   <Tab label="Sign Up" />
@@ -47,7 +47,7 @@ function SignInOutContainer() {
  <Login handleChange={handleChange}/>
 </TabPanel>
 <TabPanel value={value} index={1}>
-  <SignUp/>
+  <SignUp handleChange={handleChange}/>
 </TabPanel>
 </Paper>
 )

@@ -13,7 +13,7 @@ function SignUp() {
     const avatarStyle={backgroundColor:'#1bbd7d'}
     return (
      <Grid>
-         <Paper elevation={10} style={paperStyle}>
+         <Paper  style={paperStyle}>
              <Grid align='center'>
                  <Avatar style={avatarStyle}>
                      <AddCircleOutlineOutlinedIcon/>

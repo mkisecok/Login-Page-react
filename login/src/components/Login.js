@@ -2,14 +2,14 @@ import { Avatar, Button, Checkbox, FormControlLabel, Grid, Link, Paper, TextFiel
 import React from 'react'
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 
-function Login() {
-    const paperStyle={padding:20, height:'70vh', width:300, margin:'auto'};
+function Login({handleChange}) {
+    const paperStyle={padding:20, height:'70vh', width:300, margin:' 0 auto'};
     const avatarStyle={backgroundColor:'#1bbd7d'};
     const btnStyle={margin:'8px 0'}
     return (
     <div>
             <Grid>
-                <Paper  elevation={10} style={paperStyle}>
+                <Paper  style={paperStyle}>
                     <Grid align='center'>  
                         <Avatar style={avatarStyle}><LockOutlinedIcon/></Avatar>
                         <h2>Sign In</h2>  
@@ -22,7 +22,7 @@ function Login() {
                          <Link href="#" >Forget Password?</Link>
                     </Typography>
                     <Typography>Do you have an account?
-                         <Link href="#" >Sign Up</Link>
+                         <Link href="#" onClick={()=>handleChange('event',1)} >Sign Up</Link>
                     </Typography>
 
                 </Paper>
