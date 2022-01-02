@@ -14,8 +14,8 @@ function Login({handleChange}) {
                         <Avatar style={avatarStyle}><LockOutlinedIcon/></Avatar>
                         <h2>Sign In</h2>  
                     </Grid>
-                    <TextField id="standard-basic" label="Username" placeholder='Enter Username' variant="standard" fullWidth  required/>
-                    <TextField id="standard-basic" label="Password" placeholder='Enter Password' type='password' variant="standard" fullWidth  required/>
+                    <TextField  label="Username" placeholder='Enter Username' variant="standard" fullWidth  required/>
+                    <TextField  label="Password" placeholder='Enter Password' type='password' variant="standard" fullWidth  required/>
                     <FormControlLabel control={<Checkbox name='checkedB' color='primary' align=''/>} label="Remember me" />
                     <Button type='submit' color='primary' variant="contained" style={btnStyle} fullWidth>Sign in</Button>
                     <Typography>
