@@ -7,7 +7,7 @@ function Login() {
     const avatarStyle={backgroundColor:'#1bbd7d'};
     const btnStyle={margin:'8px 0'}
     return (
-        <div>
+    <div>
             <Grid>
                 <Paper  elevation={10} style={paperStyle}>
                     <Grid align='center'>  
@@ -27,7 +27,7 @@ function Login() {
 
                 </Paper>
             </Grid>
-        </div>
+    </div>
     )
 }
 
