@@ -1,4 +1,4 @@
-import { Avatar, Grid, Paper } from '@mui/material'
+import { Avatar, Grid, Paper, TextField } from '@mui/material'
 import React from 'react'
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 
@@ -13,7 +13,8 @@ function Login() {
                         <Avatar style={avatarStyle}><LockOutlinedIcon/></Avatar>
                         <h2>Sign In</h2>  
                      </Grid>
-                  
+                     <TextField id="standard-basic" label="Username" placeholder='Enter Username' variant="standard" fullWidth  required/>
+                     <TextField id="standard-basic" label="Password" placeholder='Enter Password' type='password' variant="standard" fullWidth  required/>
                 </Paper>
             </Grid>
         </div>
