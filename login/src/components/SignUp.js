@@ -77,16 +77,10 @@ function SignUp() {
                  <FormControlLabel control={<Field as={Checkbox}  name='termsAndConditions' />} label="I accept the terms and conditions" />
                  <FormHelperText> <ErrorMessage  name='termsAndConditions'/></FormHelperText>
                  <Button type='submit' color='primary' disabled={props.isSubmitting} variant='contained'>{props.isSubmitting?'Loading':'Sign Up'}</Button>
-             
-
                     </Form>
                 )}
             </Formik>
-
-            
-             
          </Paper>
-
      </Grid>
     )
 }

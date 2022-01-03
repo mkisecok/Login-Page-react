@@ -7,9 +7,6 @@ import { Paper } from '@mui/material';
 import Login from '../components/Login';
 import SignUp from '../components/SignUp';
 
-
-
-
 function SignInOutContainer() {
     const[value,setValue]=useState(0);
     const handleChange = (event, newValue) => {
